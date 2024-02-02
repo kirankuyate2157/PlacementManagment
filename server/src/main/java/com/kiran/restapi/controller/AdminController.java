@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/admin") // Base path for all endpoints@RequestMapping("/student") // Base path for all
-							// endpoints
 public class AdminController {
 
 	@Autowired
