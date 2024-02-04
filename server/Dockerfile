@@ -6,7 +6,7 @@ RUN mvn clean package -DskipTests
 
 
 # Create a smaller image with only the JAR file
-FROM openjdk:17.0.1-jre-slim
+FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/server-0.0.1-SNAPSHOT.jar server.jar 
 
 EXPOSE 8080
