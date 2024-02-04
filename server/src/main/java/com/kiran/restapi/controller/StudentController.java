@@ -113,10 +113,9 @@ public class StudentController {
 
         if (optionalStudent.isPresent()) {
             Student student = optionalStudent.get();
-            return ResponseEntity.ok(new ApiResponse("success", student, "Student found"));
+            return new ResponseEntity<>(student, HttpStatus.OK);
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body(new ApiResponse("error", null, "Student not found"));
+        	return new ResponseEntity<>("No student found", HttpStatus.NOT_FOUND);
         }
     }
 
