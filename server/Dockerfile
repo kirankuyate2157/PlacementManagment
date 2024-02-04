@@ -1,20 +1,17 @@
 # Use a base image with Java and Maven installed
 FROM maven:3.8.5-openjdk-17 AS build
+COPY ..
 
-# Set the working directory
-WORKDIR /app
+RUN mvn clean package -DskipTests
 
-# Copy the project files
-COPY pom.xml .
-COPY src ./src
+
 
 # Build the application
 RUN mvn clean install
 
 # Create a smaller image with only the JAR file
-FROM openjdk:11-jre-slim
-WORKDIR /app
-COPY --from=build /app/target/server.jar .
+FROM openjdk:17.0.1-jre-slim
+COPY --from=build /target/server-0.0.1-SNAPSHOT.jar  server.jar 
 
 EXPOSE 8080
 # Set the entry point
