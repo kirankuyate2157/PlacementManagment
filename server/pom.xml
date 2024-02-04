@@ -55,6 +55,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+                <source>17</source> <!-- Set to your Java version -->
+                <target>17</target> <!-- Set to your Java version -->
+            </configuration>
 			</plugin>
 		</plugins>
 	</build>

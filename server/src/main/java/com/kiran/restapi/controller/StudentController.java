@@ -13,7 +13,6 @@ import com.kiran.restapi.repository.CertificateRepository;
 import com.kiran.restapi.repository.CollegeRepository;
 import com.kiran.restapi.repository.StudentRepository;
 import com.kiran.restapi.repository.UserRepository;
-import com.kiran.restapi.utils.*;
 import java.util.*;
 import java.util.Optional;
 
