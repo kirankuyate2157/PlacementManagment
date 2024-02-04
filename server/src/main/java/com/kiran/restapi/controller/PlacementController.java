@@ -74,6 +74,7 @@ public class PlacementController {
 			if (college.getCollege_admin() != null && college.getCollege_admin().getId() == adminId) {
 				placement.setCollege(college);
 				Placement savedPlacement = placementRepository.save(placement);
+				savedPlacement.getCollege().setCollege_admin(null);
 				return new ResponseEntity<>(savedPlacement, HttpStatus.CREATED);
 			} else {
 				return new ResponseEntity<>("Admin with provided ID is not associated with the college.",
