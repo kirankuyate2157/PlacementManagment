@@ -8,7 +8,7 @@ const Sidebar = () => {
         className=' z-40 h-screen w-0 sm:w-48  sm:block transition-transform'
         aria-label='Sidebar'
       >
-        <div className=' h-full flex-col hidden sm:flex overflow-y-auto border-r border-slate-200 bg-white px-3 py-4 dark:border-slate-700 dark:bg-slate-900'>
+        <div className=' h-full flex-col hidden sm:flex overflow-y-auto border-r border-slate-200 bg-background px-3 py-4 dark:border-slate-700 '>
           <div
             href='#'
             className='mb-10 flex items-center rounded px-3 py-2 text-slate-900 dark:text-white'
@@ -54,6 +54,7 @@ const Sidebar = () => {
                   <path d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z' />
                   <polyline points='9 22 9 12 15 12 15 22' />
                 </svg>
+                
                 <span className='ml-3 flex-1 whitespace-nowrap'>Placement</span>
               </a>
             </li>
