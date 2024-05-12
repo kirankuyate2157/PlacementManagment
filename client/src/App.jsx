@@ -8,6 +8,7 @@ import TopBar from "./components/TopBar";
 import { TabsDemo } from "./components/Auth/Auth";
 import { Toaster } from "@/components/ui/sonner";
 import Dashboard from "./components/Dashboard";
+import VideoStream from "./components/VideoStream";
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path='/' element={<TabsDemo />} />
         <Route path='/home' element={<Home />} />
+        <Route path='/stream' element={<VideoStream />} />
       </Routes>
     </div>
   );
